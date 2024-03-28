@@ -26,11 +26,17 @@ function checkHit(y,x) {
         print("Ship is hit, good job bro :)")
         document.querySelector(".text").innerHTML = "Ship is hit, good job bro :)"
         document.getElementById("empty").innerHTML = `Counter = ${counter}`
+        // get the ID of the element
+        const elementToChange = "#matrix" + y + x
+        document.querySelector(elementToChange).innerHTML = "HIT"
+        console.log(elementToChange)
     } else {
         counter+=1
         document.getElementById("empty").innerText = `Counter =${counter}`
         print("You have missed the shot stupid")
         document.querySelector(".text").innerHTML = "You have missed the shot bro"
+        const elementToChange = "#matrix" + y + x
+        document.querySelector(elementToChange).innerHTML = "MISS"
     }
     if (counter>=20) {
         alert("You got too many guesses fam")

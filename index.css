@@ -5,6 +5,7 @@ tr,th,td{
     height: 30px;
     width: 30px;
     opacity: 60%;
+    text-align: center;
 }
 
 h1{
